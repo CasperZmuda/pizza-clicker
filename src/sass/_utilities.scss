@@ -1,0 +1,23 @@
+// = = = = = VARIABLES = = = = =
+
+// Font sizes etc.
+$main-font: Helvetica;
+$fsize-n: 1.8rem;
+
+// Colors
+$main-color: rgb(205, 100, 100);
+
+// Mixins, Functions
+
+// = = = = = COMPONENTS = = = = =
+
+.container {
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+	max-width: 1400px;
+
+	@media (min-width: 768px) {
+		padding: 0 2em;
+	}
+}
