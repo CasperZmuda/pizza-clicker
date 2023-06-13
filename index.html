@@ -6,13 +6,13 @@
   <meta charset="UTF-8">
 
   <!-- TITLE -->
-  <title>pizza-clicker</title>
+  <title>Pizza Clicker 🍕</title>
 
   <!-- VIEW FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- COLORED BAR FOR APPLE PRODUCTS -->
-  <meta name="theme-color" content="#45ab51">
+  <meta name="theme-color" content="#5a2121">
 
   <!-- CREDITS -->
   <meta name="author" content="Kacper Żmuda">
@@ -31,12 +31,35 @@
   <!-- STYLES, FAVICONS, FONTS -->
   <link rel="icon" type="image/png" href="./dist/img/favicon.png">
   <link rel="stylesheet" href="./dist/css/main.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 
   <!-- SCRIPTS, LIBRARIES -->
   <script defer src="/dist/js/index.min.js"></script>
 </head>
 
 <body>
-    <section id="anchor" class="section"></section></body>
+  <section class="start-menu">
+  <div class="container">
+    <div class="start-menu__box">
+      <h1 class="start-menu__heading">Pizza Clicker 🍕</h1>
+      <p class="start-menu__text">Klikaj i rozwjaj swoje imperium pizzowe. Kupuj dodatki i zdobywaj nagrody!</p>
+
+      <form class="form">
+        <label class="form__text" for="name">Wpisz nazwę swojej pizzeri:</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="zajefajna pitca" maxlength="16" required>
+        <input class="form__button" type="submit" value="Graj!">
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="footer__text">Stworzone z pomocą i myślą o 🍕</p>
+</footer>  <section class="welcome-text disabled">
+  <p class="welcome-text__text">Jesteś właścicielem</p>
+  <h3 class="welcome-text__restaurant"></h3>
+</section></body>
 
 </html>

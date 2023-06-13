@@ -1,5 +1,172 @@
 @use 'reset';
-// = = = = = STYLES = = = = =
+@use 'utilities' as *;
 
 // = = = = = MEDIA QUERIES = = = = =
+
 @use 'rwd';
+
+// = = = = = STYLES = = = = =
+
+.start-menu {
+	height: 100vh;
+	width: 100vw;
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__heading {
+		margin: 1em 0;
+		font-size: $fsize-b;
+		@media (min-width: 768px) {
+			font-size: 6rem;
+		}
+	}
+
+	&__text {
+		margin-bottom: 1em;
+		text-align: center;
+		@media (min-width: 768px) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.footer {
+	background-color: $additional-color;
+
+	&__text {
+		text-align: center;
+		margin: 1em;
+	}
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__text {
+		font-weight: bold;
+	}
+
+	&__input {
+		margin: 1em;
+		padding: 1em;
+		text-align: center;
+		font-size: $fsize-n;
+		border: none;
+		border-radius: 10px;
+		background-color: $additional-color;
+		color: $font-color;
+
+		&::selection {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		padding: 0.5em 1em;
+		font-size: $fsize-n;
+		font-weight: bold;
+		color: $font-color;
+		border: 2px solid $additional-color;
+		background-color: transparent;
+		border-radius: 10px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $additional-color;
+		}
+	}
+}
+
+.welcome-text {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: 0;
+
+	&__text {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%);
+		text-align: center;
+		opacity: 0;
+		animation: welcomeAnimation1 7s;
+		@media (min-width: 768px) {
+			font-size: 3rem;
+		}
+	}
+
+	&__restaurant {
+		bottom: 45%;
+		left: 50%;
+		transform: translate(-50%);
+		position: absolute;
+		font-weight: 500;
+		font-size: $fsize-b;
+		opacity: 0;
+		animation: welcomeAnimation2 7s;
+		@media (min-width: 768px) {
+			font-size: 6rem;
+		}
+	}
+}
+
+.animation1 {
+	@keyframes welcomeAnimation1 {
+		0% {
+			top: 0;
+		}
+		20% {
+			opacity: 0;
+		}
+
+		30% {
+			top: 40%;
+			opacity: 1;
+		}
+
+		80% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+}
+
+.animation2 {
+	@keyframes welcomeAnimation2 {
+		0% {
+			bottom: 0;
+		}
+		20% {
+			opacity: 0;
+		}
+
+		30% {
+			bottom: 45%;
+			opacity: 1;
+		}
+
+		80% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+}

@@ -1,11 +1,14 @@
 // = = = = = VARIABLES = = = = =
 
 // Font sizes etc.
-$main-font: Helvetica;
-$fsize-n: 1.8rem;
+$main-font: 'Roboto', 'sans-serif';
+$fsize-n: 2rem;
+$fsize-b: 4rem;
 
 // Colors
 $main-color: rgb(205, 100, 100);
+$additional-color: rgb(244, 219, 219);
+$font-color: #5a2121;
 
 // Mixins, Functions
 
@@ -20,4 +23,8 @@ $main-color: rgb(205, 100, 100);
 	@media (min-width: 768px) {
 		padding: 0 2em;
 	}
+}
+
+.disabled {
+	display: none;
 }
