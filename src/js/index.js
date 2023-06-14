@@ -19,7 +19,7 @@ const startGame = e => {
 		welcomeText.classList.remove('disabled');
 		welcomeTextRestaurantName.textContent = restaurantName;
 		welcomeTextInformation();
-		// loadGame();
+		setTimeout(loadGame, 8000);
 	}
 };
 
@@ -39,6 +39,6 @@ playGameBtn.addEventListener('keydown', e => {
 	}
 });
 
-// const loadGame = () => {
-  // document.title = '0 - Pizza Clicker 🍕';
-// };
+const loadGame = () => {
+	window.location.href = `/game.html`;
+};
