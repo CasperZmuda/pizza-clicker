@@ -40,5 +40,5 @@ playGameBtn.addEventListener('keydown', e => {
 });
 
 const loadGame = () => {
-	window.location.href = `/game.html`;
+	window.location.href = `../game.kit`;
 };
