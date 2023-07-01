@@ -8,6 +8,9 @@ let welcomeTextRestaurantName = document.querySelector(
 	'.welcome-text__restaurant'
 );
 
+
+// Starts game
+
 const startGame = e => {
 	if (restaurantName.value) {
 		e.preventDefault();
@@ -22,6 +25,8 @@ const startGame = e => {
 		setTimeout(loadGame, 8000);
 	}
 };
+
+// Text shows when game started
 
 const welcomeTextInformation = () => {
 	welcomeTextText.classList.add('animation1');
